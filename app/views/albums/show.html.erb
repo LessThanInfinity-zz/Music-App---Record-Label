@@ -1,0 +1,21 @@
+<h1> <%= @album.name %> </h1>
+
+<h3> Tracks </h3>
+
+<ul>
+	<% @album.tracks.each do |track| %>
+	<li> <%= link_to "#{track.title}", track %> </li>
+
+	<% end %>
+</ul>
+
+<p>
+<%= link_to "Add new track", new_track_url %>
+</p>
+
+
+<%= button_to "Destroy Album" , {:controller => :albums, :confirm => "Are you sure?", :action => "destroy" }, :method => "delete" %>
+
+<p>
+<%= link_to "Back to #{@band.name}", @band %>
+</p>

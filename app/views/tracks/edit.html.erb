@@ -1,0 +1,8 @@
+<h1> Edit Band details</h1>
+
+<%= @track.errors.messages %>
+<form action="/tracks/<% @track.id %>" method= "put">
+
+	<%= render :partial => "form" %>
+
+</form>

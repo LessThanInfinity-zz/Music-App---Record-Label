@@ -1,0 +1,29 @@
+<!-- <% options_for_select(@bands.map {|band| [band.name,band.id]})   %> -->
+
+
+
+<!-- add default values -->
+
+<label for="band">Band</label>
+<select name="album[band_id]" id="band">
+	<% @bands.each do |band|%>
+		<option value= "<%= band.id %>" > <%= band.name %> </option>
+	<% end %>
+</select>
+<br>
+
+<label for="album_name">Album name</label>
+	<input name="album[name]" id="album_name" type="text" value = "<% @album.name %>" >
+<br>
+
+<label for="album_recording">Album Recording</label>
+	<select name="album[recording]" id="album_recording">
+		<option value='live'>Live</option>
+		<option value='studio'>Studio</option>
+	</select>
+<br>
+
+<input type ="submit" value="Submit">
+
+
+

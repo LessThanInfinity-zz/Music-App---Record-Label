@@ -1,0 +1,23 @@
+<!-- <#% options_for_select(@tracks.map {|track| [track.name,track.id]})   %> -->
+
+
+
+<!-- add default values -->
+
+<label for="track">Track</label>
+<select name="note[track_id]" id="track">
+	<% @tracks.each do |track|%>
+		<option value= "<%= track.id %>" > <%= track.title %> </option>
+	<% end %>
+</select>
+<br>
+
+<label for="note_content">Note</label>
+	<textarea name="note[content]" id="note_content"></textarea>
+<br>
+
+
+<input type ="submit" value="Submit">
+
+
+

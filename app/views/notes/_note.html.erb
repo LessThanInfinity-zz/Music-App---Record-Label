@@ -1,0 +1,9 @@
+<h4>Add Note:</h4>
+
+<textarea name="note[content]" id="note_content"></textarea>
+<input name="note[track_id]" type="hidden" value= '<%= @track.id %>' >
+<br>
+
+<%= button_to "Submit note",
+		{:controller => :notes, :action => "create"},
+		:method => "post" %>

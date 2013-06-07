@@ -1,0 +1,13 @@
+<h1>Bands in record</h1>
+
+<ul>
+
+	<% @bands.each do |band|%>
+		<li> 	<%= link_to "#{band.name}", band %>
+		</li>
+	<% end %>
+
+</ul>
+
+<%= link_to "Add a band!", new_band_url %>
+

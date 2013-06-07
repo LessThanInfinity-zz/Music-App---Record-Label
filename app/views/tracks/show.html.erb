@@ -1,0 +1,25 @@
+<h1> <%= @track.title %> </h1>
+
+<h3> Lyrics </h3>
+	<%= gay_lyrics(@track.lyrics)%>
+<br>
+
+<h3>Notes on this track</h3>
+
+<ol>
+	<% @track.notes.each do |note|%>
+	<li> <%= note.content %> </li>
+
+
+	<% end %>
+</ol>
+
+<form action="/notes" method= "post">
+	<%= render :partial => "/notes/note" %>
+</form>
+
+<br>
+
+<%= button_to "Destroy Track", {:controller => :tracks, :confirm => "Are you sure?", :action => "destroy" }, :method => "delete" %>
+
+<p><%= link_to "Back to #{@album.name}", @album %></p>

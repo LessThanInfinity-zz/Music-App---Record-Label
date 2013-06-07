@@ -1,0 +1,8 @@
+<h1> Edit Band details</h1>
+
+<%= @album.errors.messages %>
+<form action="/albums/<% @album.id %>" method= "put">
+
+	<%= render :partial => "form" %>
+
+</form>9

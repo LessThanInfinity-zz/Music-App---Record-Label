@@ -1,0 +1,31 @@
+<!-- <% options_for_select(@albums.map {|album| [album.name,album.id]})   %> -->
+
+
+
+<!-- add default values -->
+
+<label for="album">Album</label>
+<select name="track[album_id]" id="album">
+	<% @albums.each do |album|%>
+		<option value= "<%= album.id %>" > <%= album.name %> </option>
+	<% end %>
+</select>
+<br>
+
+<label for="track_title">Track title</label>
+	<input name="track[title]" id="track_title" type="text" value = "<% @track.title %>" >
+	<select name="track[track_type]" id="track_title">
+		<option value='regular'>Regular</option>
+		<option value='bonus'>Bonus</option>
+	</select>
+<br>
+
+<label for="track_lyrics">Lyrics</label>
+	<textarea name="track[lyrics]" id="track_lyrics"></textarea>
+<br>
+
+
+<input type ="submit" value="Submit">
+
+
+

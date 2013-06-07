@@ -1,0 +1,12 @@
+<h1> Add an Album </h1>
+
+<%= @album.errors.messages %>
+
+<form action="/albums" method= "post">
+
+	<%= render :partial => "form" %>
+
+</form>
+<p><%= link_to "Back to Bands index", "/bands/" %></p>
+
+

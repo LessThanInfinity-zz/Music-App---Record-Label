@@ -1,0 +1,9 @@
+<h1> Please Log in </h1>
+
+<%= flash[:notices] %>
+
+<form action="/session" method= "post">
+
+	<%= render :partial => "form" %>
+
+</form>
